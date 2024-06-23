@@ -1,0 +1,333 @@
+/* Stiluri generale pentru pagina */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url("img/content-pixie-l6I8jpzKJQU-unsplash.jpg") center
+    center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.search-container {
+  text-align: center;
+  border-radius: 8px;
+  padding: 20px;
+  background-image: linear-gradient(
+    45deg,
+    #8b5a2b 25%,
+    #dfa564 25%,
+    #dfa564 50%,
+    #8b5a2b 50%,
+    #8b5a2b 75%,
+    #dfa564 75%,
+    #dfa564
+  );
+  opacity: 0.4;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.search-container.hidden {
+  opacity: 0;
+  pointer-events: none; /* Asigură că elementul nu mai primește evenimente de la mouse */
+  transition: opacity 0.3s ease; /* Adaugă o tranziție pentru efectul de dispariție */
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  background-color: #cb1616;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.input-box input[type="text"] {
+  border: none;
+  background-color: transparent;
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+.input-box button {
+  background-color: #007bff;
+  color: rgb(91, 8, 8);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.input-box button:hover {
+  background-color: #0056b3;
+}
+
+.page-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 100px; /* Spațiu pentru a evita suprapunerea cu bara de căutare */
+  height: 100%;
+}
+
+.cards-left,
+.cards-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 40px;
+  width: 15%;
+  margin: 15px;
+}
+
+.cards-left {
+  align-items: flex-start;
+  width: 330px;
+}
+
+.cards-right {
+  align-items: flex-end;
+  width: 330px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+.container {
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.button-add-employee {
+  width: 200px;
+  margin: 20px 0;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+h1,
+h2 {
+  color: #333;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button[type="submit"] {
+  background-color: #28a745;
+  color: #f3f3f3;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.employee-list h2 {
+  margin-top: 20px;
+}
+
+ul#employeeList {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul#employeeList li {
+  background-color: #f3f3f3;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  color: #333;
+}
+
+.card p {
+  color: #666;
+}
+
+.button-employee {
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.delete-btn {
+  margin-left: 50px; /* Mută butonul spre dreapta */
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.accept-btn {
+  background-color: #218838; /* Blue background color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accept-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Media Queries pentru dispozitive mai mici */
+@media (max-width: 1024px) {
+  .page-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards-left,
+  .cards-right,
+  .main-content {
+    width: 90%;
+  }
+
+  .cards-left,
+  .cards-right {
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-left,
+  .cards-right {
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #218838;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.close-popup:hover {
+  color: #ccc;
+}
+
+@media (max-width: 480px) {
+  .search-container {
+    padding: 10px;
+  }
+
+  .input-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-box input[type="text"] {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .page-wrapper {
+    padding-top: 80px; /* Spațiu mai mic pentru bara de căutare */
+  }
+
+  .cards-left,
+  .cards-right {
+    padding: 5px;
+    margin: 5px 0;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .button-add-employee,
+  .button-employee,
+  .delete-btn {
+    width: 100%;
+  }
+}

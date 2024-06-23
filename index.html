@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Employee Management</title>
+  </head>
+  <body>
+    <div class="search-container">
+      <label for="search">Search:</label>
+      <input type="text" id="search" placeholder="Search employers..." />
+    </div>
+
+    <div class="page-wrapper">
+      <!-- Container pentru carduri în stânga -->
+      <div class="cards-left">
+        <div class="card">
+          <h2>Software Development Task:</h2>
+          <p>
+            Task Description: Develop a web application that allows users to
+            create and manage their personal task lists. Include features for
+            adding, editing, and deleting tasks.
+          </p>
+          <button class="accept-btn">Accept Task</button>
+        </div>
+        <div class="card">
+          <h2>Marketing Campaign Task:</h2>
+          <p>
+            Task Description: Design a digital marketing campaign for a new
+            product launch. Develop creative content for social media platforms,
+            create engaging email newsletters.
+          </p>
+          <button class="accept-btn">Accept Task</button>
+        </div>
+        <div class="card">
+          <h2>Research Project Task:</h2>
+          <p>
+            Task Description: Conduct a comparative analysis of renewable energy
+            sources focusing on solar and wind power. Gather data on efficiency,
+            cost-effectiveness, and environmental impact.
+          </p>
+          <button class="accept-btn">Accept Task</button>
+        </div>
+        <div class="card">
+          <h2>Event Planning Task:</h2>
+          <p>
+            Task Description: Organize a corporate networking event for 100
+            attendees. Coordinate venue selection, catering, guest invitations,
+            and program scheduling.
+          </p>
+          <button class="accept-btn">Accept Task</button>
+        </div>
+      </div>
+
+      <!-- Container principal în mijlocul paginii -->
+      <div class="main-content">
+        <div class="container">
+          <h1>Employee Management</h1>
+          <div class="form-container">
+            <h2>Add Employee</h2>
+            <form id="employeeForm">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required /><br />
+              <label for="position">Position:</label>
+              <input type="text" id="position" name="position" required /><br />
+              <label for="salary">Salary:</label>
+              <input type="number" id="salary" name="salary" required /><br />
+              <button class="button-employee" type="submit">
+                Add Employee
+              </button>
+            </form>
+          </div>
+          <div class="employee-list">
+            <h2>Employee List</h2>
+            <ul id="employeeList"></ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Container pentru carduri în dreapta -->
+      <div class="cards-right">
+        <div class="card">
+          <h2>Content Creation Task:</h2>
+          <p>
+            Task Description: Write a series of blog posts on digital
+            transformation trends in the healthcare industry. Research current
+            developments, interview industry experts, and draft informative
+            articles that provide valuable insights to readers..
+          </p>
+          <button class="accept-btn">Accept Task</button>
+        </div>
+        <div class="card">
+          <h2>Financial Analysis Task:</h2>
+          <p>
+            Task Description: Perform a financial analysis of company XYZ’s
+            quarterly performance. Analyze revenue trends, cost structures, and
+            profitability ratios.
+          </p>
+          <button class="accept-btn">Accept Task</button>
+        </div>
+        <div class="card">
+          <h2>Graphic Design Task:</h2>
+          <p>
+            Task Description: Create a series of promotional graphics for a new
+            product launch campaign. The graphics should include social media
+            banners, product logos, and digital advertisements.
+          </p>
+          <button class="accept-btn">Accept Task</button>
+        </div>
+        <div class="card">
+          <h2>Customer Service Task:</h2>
+          <p>
+            ask Description: Perform a financial analysis of company XYZ’s
+            quarterly performance. Analyze revenue trends, cost structures, and
+            profitability ratios. Prepare a comprehensive report with
+            recommendations to optimize financial performance.
+          </p>
+          <button class="accept-btn">Accept Task</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
